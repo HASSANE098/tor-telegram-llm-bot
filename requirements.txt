@@ -1,0 +1,33 @@
+# === Основные зависимости бота ===
+aiogram>=3.4.0
+aiosqlite>=0.19.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# === RAG и работа с документами ===
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+langchain-chroma>=0.1.0
+sentence-transformers>=2.3.1
+
+# === Обработка файлов ===
+pypdf>=4.0.0
+docx2txt>=0.8
+pdfplumber>=0.10.0
+
+# === Векторные embeddings ===
+numpy>=1.24.0
+
+# === Дополнительные зависимости ===
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# === Опционально (закомментировано) ===
+# torch>=2.1.0  # Нужен только для GPU ускорения
+# whisper  # Для распознавания речи
+# faster-whisper  # Быстрая версия whisper
+# sounddevice  # Для работы со звуком
+# piper-tts  # TTS синтез речи
+# edge-tts  # TTS от Microsoft
+# tiktoken  # Подсчёт токенов OpenAI-style

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# База данных бота
+*.db
+*.sqlite3
+supreme_cache.db
+
+# RAG / ChromaDB
+chroma_db/
+*.bin
+*.parquet
+
+# Логи
+*.log
+bot.log
+
+# Конфигурация (содержит токены!)
+.env
+
+# Временные файлы
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
