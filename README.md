@@ -81,6 +81,9 @@ Supreme_Lab/
 ├── chroma_db/             # База знаний RAG
 ├── supreme_cache.db       # Кэш и логи
 └── bot.log                # Логи работы
+│
+└── additionally/
+    └── TELEGRAM_BOT_SETUP.md    # Настройка Telegram бота в BotFather
 ```
 
 ---
@@ -244,5 +247,6 @@ Contributions are welcome! Feel free to:
 ---
 
 **Приятного использования! 🚀**
+
 
 > Made with [Ollama](https://ollama.ai) & [Claude](https://claude.ai)
